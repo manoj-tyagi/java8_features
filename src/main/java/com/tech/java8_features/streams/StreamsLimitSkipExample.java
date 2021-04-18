@@ -8,7 +8,7 @@ public class StreamsLimitSkipExample {
 	
 	public static Optional<Integer> limit(List<Integer> list){
 		
-		return list.stream().limit(2).skip(2).reduce(Integer::sum);
+		return list.stream().limit(2).reduce(Integer::sum);
 	}
 
 	public static void main(String[] args) {

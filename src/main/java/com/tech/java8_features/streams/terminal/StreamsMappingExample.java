@@ -10,8 +10,11 @@ public class StreamsMappingExample {
 	
 
 	public static List<String> mapping() {
+	/*	return StudentDataBase.getAllStudents().stream()
+				.collect(Collectors.mapping(Student::getName, Collectors.toList()));*/
+		
 		return StudentDataBase.getAllStudents().stream()
-				.collect(Collectors.mapping(Student::getName, Collectors.toList()));
+				.map(Student::getName).collect(Collectors.toList());
 	}
 
 	public static void main(String[] args) {
